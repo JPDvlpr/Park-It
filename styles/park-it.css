@@ -29,6 +29,9 @@ button{
 
 #container{
     position: absolute; /* container will sit beaneath nav bar */
+    top: 60px;
+    left: 0px;
+    width: 100%;
 }
 
 #instructions{
