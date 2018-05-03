@@ -21,6 +21,7 @@ button{
 }
 
 #gotIt{
-    color: white;
+    border: gray;
+    color: black;
     border-radius: 5px;
 }
