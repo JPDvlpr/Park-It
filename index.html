@@ -26,7 +26,30 @@
     </div>
     <div id="map">Map here</div>
     <div id="directions">Directions here</div>
-
 </div>
+
+<script>
+    function initMap() {
+        var grc = {lat: 47.313582, lng: -122.1800072};
+        var tokyo = {lat: 35.6895, lng: 139.6917};
+        var mapDiv = new google.maps.Map(document.getElementById('map'),{
+            zoom: 6,
+            center: grc
+        });
+        var marker = new google.maps.Marker({
+            position: grc,
+            map: mapDiv
+        });
+        // alert("Hello!");
+    }
+</script>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="js/park-it.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjUXg_BAoN08sO6yLX62T1Mat7mouBhVI&callback=initMap">
+
 
 </body>
