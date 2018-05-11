@@ -1,5 +1,6 @@
 // alert("hello!");
 
+$(init);
 
 function initMap() {
     var grc = {lat: 47.313582, lng: -122.1800072};
@@ -15,6 +16,19 @@ function initMap() {
     // alert("Hello!");
 }
 
+function onDeviceReady() {
+    //Load the correct stylesheet
+    if (cordova.platformif == 'ios'){
+        $('head').append('<link rel="stylesheet" href="css/park-it-ios.css" type="text/css" />');
+        //prevents status bar from overlaying web view
+        window.StatusBar.overrlaysWebView(false);
+        window.StatusBar.styleDefault();
+    } else {
+        $('head').append('<link rel="stylesheet" href="css/park-it-android.css" type="text/css" />');
+        //prevents status bar from overlaying web view
+        window.StatusBar.backgroundColor("#1565C0");
+    }
+}
 
 $('#park').click(function () {
         alert("Set parking location");
